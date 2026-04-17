@@ -151,10 +151,9 @@ export function Footer() {
       <div className="border-t border-background/10">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-6 md:flex-row">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <span className="text-sm font-bold text-primary-foreground">B</span>
+            <div className="flex h-15 w-15 items-center justify-center rounded-lg bg-white">
+              <img src="/logo.svg" alt="Logo" className="h-50 w-50" />
             </div>
-            <span className="font-semibold text-background">Boa Visita</span>
           </div>
           <p className="text-sm text-background/60">
             &copy; {new Date().getFullYear()} Boa Visita. Todos os direitos reservados.

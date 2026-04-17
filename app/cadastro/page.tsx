@@ -39,9 +39,7 @@ export default function CadastroPage() {
 
         <Card className="border-border">
           <CardHeader className="text-center">
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary">
-              <span className="text-2xl font-bold text-primary-foreground">B</span>
-            </div>
+            <img src="/logo.svg" alt="Logo" className="h-45 w-45 mx-auto" />
             <CardTitle className="text-2xl text-foreground">Criar conta</CardTitle>
             <CardDescription>
               Junte-se ao Boa Visita e explore São João
