@@ -53,12 +53,12 @@ export function Sidebar({ user }: SidebarProps) {
 
   const SidebarContent = ({ isMobile = false }: { isMobile?: boolean }) => (
     <div className={cn(
-      "flex h-full flex-col bg-sidebar text-sidebar-foreground",
+      "flex h-full flex-col bg-gradient-to-b from-[#FFFFFF] via-[#FFA100] via-[#FFC93E] to-[#FF004D] text-sidebar-foreground",
       !isMobile && (collapsed ? "w-[70px]" : "w-[260px]"),
       "transition-all duration-300"
     )}>
       {/* Header com nome do usuário */}
-      <div className="border-b border-sidebar-border p-4">
+      <div className=" p-4">
         <div className={cn(
           "flex items-center gap-3",
           collapsed && !isMobile && "justify-center"
@@ -81,15 +81,10 @@ export function Sidebar({ user }: SidebarProps) {
 
       {/* Logo */}
       <div className={cn(
-        "flex items-center gap-2 border-b border-sidebar-border p-4",
+        "flex items-center gap-2 p-4",
         collapsed && !isMobile && "justify-center"
       )}>
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
-          <span className="text-lg font-bold text-sidebar-primary-foreground">B</span>
-        </div>
-        {(!collapsed || isMobile) && (
-          <span className="text-lg font-bold text-sidebar-foreground">Boa Visita</span>
-        )}
+        <img src="/logo.svg" alt="Logo" className="h-35 w-35 mx-auto" />
       </div>
 
       {/* Menu */}
@@ -104,8 +99,8 @@ export function Sidebar({ user }: SidebarProps) {
                   className={cn(
                     "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                     isActive
-                      ? "bg-sidebar-primary text-sidebar-primary-foreground"
-                      : "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+                      ? "bg-sidebar-primary text-black"
+                      : "text-black/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
                     collapsed && !isMobile && "justify-center px-2"
                   )}
                 >
@@ -153,7 +148,7 @@ export function Sidebar({ user }: SidebarProps) {
           ) : (
             <Button
               variant="ghost"
-              className="w-full justify-start gap-3 text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+              className="w-full justify-start gap-3 text-black/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
             >
               <LogOut className="h-5 w-5" />
               Sair
