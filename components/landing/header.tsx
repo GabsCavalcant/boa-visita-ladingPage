@@ -29,6 +29,9 @@ export function Header() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Button variant="ghost" asChild>
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
+          <Button variant="ghost" asChild>
             <Link href="/login">Entrar</Link>
           </Button>
           <Button asChild>
@@ -58,6 +61,9 @@ export function Header() {
               Contato
             </Link>
             <div className="flex flex-col gap-2 pt-2">
+              <Button variant="ghost" asChild className="justify-start">
+                <Link href="/dashboard">Dashboard</Link>
+              </Button>
               <Button variant="ghost" asChild className="justify-start">
                 <Link href="/login">Entrar</Link>
               </Button>
